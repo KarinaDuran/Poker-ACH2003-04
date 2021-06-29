@@ -22,11 +22,11 @@ public class Player {
       this.cards = montaCartas(strCards);
     }
 
-    public Card[] montaCartas(){
+    public Card[] montaCartas(String strCards){
         String[] arrStrCards = strCards.split(" ");
         Card[] auxCards = new Card[arrStrCards.length];
 
-        for(int i = 0; i < cards.length; i++)
+        for(int i = 0; i < auxCards.length; i++)
             auxCards[i] = new Card(arrStrCards[i]);
 
         return auxCards;

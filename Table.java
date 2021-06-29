@@ -56,10 +56,10 @@ public class Table {
 
 		return (isFlush(cards) && isStraight(cards));
 	}
+	//usa o método compareCard de Card para verificar se as duas cartas tem o mesmo numero
+	private boolean isFourKind(Card[] cards) {			
 
-	private boolean isFourKind(Card[] cards) {
-
-		return cards[0] == cards[3] || cards[1] == cards[4];
+		return cards[0].compareCard(cards[3]) == 0 || cards[1].compareCard(cards[4]) == 0;
 	}
 
 	private boolean isFullHouse(Card[] cards) {
@@ -162,5 +162,21 @@ public class Table {
 
 	private void sortCards(Card[] cards) {
 		quicksort(cards, 0, cards.length - 1);
+	}
+		//Metodo que imprime os participantes e suas pontuacoes e o/os vencedores
+	public void winner(Player [] players){
+		Player vencedor = players[0];
+		for (int i =1; i< players.length; i++){
+			if (defineHand(players[i]) > defineHand(vencedor)){
+				vencedor = players[i];
+			}
+		}
+		for (int i =0; i< players.length; i++){
+			System.out.println(individualTest(players[i].toString()));
+			if (defineHand(players[i]) == defineHand(vencedor)){
+				System.out.print (" Venci");
+			}
+		
+		}
 	}
 }
