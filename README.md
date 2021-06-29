@@ -40,6 +40,7 @@ Os métodos são:
 - individualTest imprime as 5 cartas testadas e a sua respectiva classificação
 - sortCards é o método que ordena da maior carta para a menor carta. Ela utiliza o algoritmo Quicksort. Para isso ela utiliza os métodos:
   - Quicksort, trocaValorEntreCards, particiona
+- winner imprime os participantes e suas pontuações e imprime " Venci" na frente do(s) vencedor(es)
 
 ## Contribuidores
 
